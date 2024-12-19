@@ -18,7 +18,7 @@ Clone this repository:
 
 bash
 Copy code
-git clone https://github.com/yourusername/genai-chatbot-prehab.git
+git clone https://github.com/Tanveer2308/PrehabGenAIChatbot
 cd genai-chatbot-prehab
 Open the project in Google Colab:
 
