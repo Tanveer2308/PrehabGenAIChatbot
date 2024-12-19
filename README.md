@@ -1,24 +1,65 @@
 # Chatbot_Prehab4Me
-Create an environment from AnaConda in your specified folder where you want to run your project
-    conda create -p venv python==3.10 -y
-Active the environment:
-    conda activate C:\Users\washi\Langchain\venv
-Install all the packages mentioned in the requirements.txt that is placed inside venv folder.
-    pip install -r requirements.txt
-Install poppler using Conda:
-    conda install -c conda-forge poppler
-Create your Google API Key from this link : https://aistudio.google.com/app/apikey
-Now create a new .env file where you can place your GOOGLE_API_KEY like this:
-    GOOGLE_API_KEY="XXXXXXXXXXXX"
-Run your .py file that is placed under venv folder using this command(My file name is chatpdf1.py)
-    streamlit run chatpdf1.py
-You will see a webpage where you can upload your pdfs and click Submit and Process button; Once processing is done, you can ask your questions.
+Generative AI Chatbot for [Prehab 4 Me]
+This repository contains a Generative AI chatbot built using Gemini 1.5 Pro on Google Colab. The chatbot leverages advanced Natural Language Processing (NLP) capabilities to assist users in accessing relevant information from the Prehab 4 Me website. It includes an intuitive Gradio UI for seamless interaction with users, enabling real-time, accurate, and contextually relevant responses.
 
-All the questions that AI not able to answer will be saved In unanswered_questions.txt file, so that someone(like admin) can track what are the questions are coming that AI is not able to answer.
+Features
+Powered by Gemini 1.5 Pro: Utilizes advanced Generative AI for accurate and reliable responses.
+Gradio User Interface: A simple, user-friendly interface for interaction.
+Domain-Specific Knowledge: Tailored to the Prehab 4 Me website, focusing on prehabilitation resources.
+Self-Learning: Adapts to user interactions to refine its performance over time.
+Reliable and Contextual Responses: Implements safeguards against hallucinated or unreliable outputs.
+Installation and Setup
+Prerequisites
+A Google account to access Google Colab.
+Python 3.8+ installed (for local execution if needed).
+Basic knowledge of Gradio for UI customization.
+Steps to Run the Chatbot
+Clone this repository:
 
-All the "not related" queries will also be saved into the knowledge_base.json file where admin can change the answer, And AI will pick the answer from this file next time for the same question.
+bash
+Copy code
+git clone https://github.com/yourusername/genai-chatbot-prehab.git
+cd genai-chatbot-prehab
+Open the project in Google Colab:
 
-All the chats are saving in a file name query_history.txt.
+Upload the provided GenAI_Chatbot.ipynb file to Google Colab.
+Install required dependencies: Run the following in a Colab cell to install necessary libraries:
 
-And code will show the history for each new session but everything will be saved in query_history file.
+python
+Copy code
+!pip install gemini-pro gradio
+Execute the Notebook:
+
+Step through the cells to load the Gemini 1.5 Pro model, configure the chatbot, and launch the Gradio UI.
+Access the Gradio Interface:
+
+Upon execution, a URL will be generated to interact with the chatbot.
+Usage
+For Patients: Ask questions related to prehabilitation, such as exercise plans, dietary recommendations, and pre-surgery preparations.
+For Healthcare Providers: Retrieve links and educational materials quickly to assist patients effectively.
+Example queries:
+
+"What exercises should I do before surgery?"
+"Can you provide a nutrition guide for prehabilitation?"
+Technical Details
+Model: Gemini 1.5 Pro
+Framework: Google Colab for development and training.
+UI: Gradio for interaction.
+Folder Structure
+plaintext
+Copy code
+/
+├── GenAI_Chatbot.ipynb  # Main Colab notebook for chatbot implementation
+├── README.md            # Project documentation
+├── requirements.txt     # Dependencies for local setup
+└── sample_data/         # Example data or configurations
+Future Enhancements
+Enable multilingual support for a broader user base.
+Integrate real-time updates from the Prehab 4 Me website.
+Extend the chatbot's scope to include post-surgery rehabilitation guidance.
+Contributing
+Contributions are welcome! Please fork the repository, create a feature branch, and submit a pull request.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
