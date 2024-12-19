@@ -1,4 +1,4 @@
-# Chatbot_Medibuddy
+# Chatbot_Prehab4Me
 Create an environment from AnaConda in your specified folder where you want to run your project
     conda create -p venv python==3.10 -y
 Active the environment:
